@@ -19,6 +19,11 @@ final class Stack {
     public static final int C3 = 3;
 
     /**
+    * 4.
+    */
+    public static final int C4 = 4;
+
+    /**
     * Prevent instantiation.
     * Throw an exception IllegalStateException.
     * if this ever is called
@@ -40,28 +45,34 @@ final class Stack {
         MrCoxallStack stackVariable = new MrCoxallStack();
         int userChoice = 0;
 
-        while (userChoice != C3) {
+        while (userChoice != C4) {
             final Scanner userInput = new Scanner(System.in);
             try {
                 System.out.print("Would you like to (input 1) add an integer ");
-                System.out.print("to the stack, (input 2) check the stack, or");
-                System.out.print(" (input 3) exit?: ");
+                System.out.print("to the stack, (input 2) remove an integer ");
+                System.out.print("from the stack, (input 3) check the stack,");
+                System.out.print(" or (input 4) exit?: ");
                 userChoice = userInput.nextInt();
 
                 switch (userChoice) {
                     case 1:
                         final Scanner userInt = new Scanner(System.in);
-                        System.out.println("\nEnter an integer to add: ");
+                        System.out.print("\nEnter an integer to add: ");
                         int userAddition = userInt.nextInt();
                         stackVariable.push(userAddition);
                         break;
 
                     case 2:
+                        stackVariable.pop();
+                        System.out.println("\nYou have removed an integer.");
+                        break;
+
+                    case C3:
                         System.out.println("\n");
                         stackVariable.showStack();
                         break;
 
-                    case C3:
+                    case C4:
                         break;
 
                     default:

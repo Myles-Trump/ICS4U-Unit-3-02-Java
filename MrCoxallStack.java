@@ -12,7 +12,7 @@ public class MrCoxallStack {
     /**
     * This is the stack's array.
     */
-    private ArrayList<Integer> stackAsArray = new ArrayList<Integer>();
+    private ArrayList<Integer> stackAsArray = new ArrayList<Integer>(); 
 
     /**
     * The Push() function adds integers to the stack.
@@ -20,6 +20,13 @@ public class MrCoxallStack {
     */
     public void push(final int pushNumber) {
         stackAsArray.add(pushNumber);
+    }
+
+    /**
+    * The Pop() function removes integers from the stack.
+    */
+    public void pop() {
+        stackAsArray.remove(stackAsArray.size() - 1);
     }
 
     /**
