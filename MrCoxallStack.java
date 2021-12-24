@@ -12,7 +12,7 @@ public class MrCoxallStack {
     /**
     * This is the stack's array.
     */
-    private ArrayList<Integer> stackAsArray = new ArrayList<Integer>(); 
+    private ArrayList<Integer> stackAsArray = new ArrayList<Integer>();
 
     /**
     * The Push() function adds integers to the stack.
